@@ -1,6 +1,6 @@
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import Runnable, RunnableMap
-from langchain_openai import ChatOpenAI
+from langchain_openai import ChatOpenAI, AzureChatOpenAI
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough, RunnableParallel
 
@@ -16,7 +16,7 @@ def get_expression_chain(
         ]
     )
 
-    llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
+    llm = AzureChatOpenAI(model="sanskruti-gpt35-turbo", temperature=0)
     
     def format_docs(docs):
         return "\n\n".join(doc.page_content for doc in docs)
