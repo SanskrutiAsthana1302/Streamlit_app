@@ -16,7 +16,7 @@ def get_expression_chain(
         ]
     )
 
-    llm = AzureChatOpenAI(model="sanskruti-gpt35-turbo", temperature=0)
+    llm = AzureChatOpenAI(model="sanskruti-gpt35-turbo", temperature=0,api_version = "2024-02-01", api_key = "db9d4f4943224431872f6872499ac0b4",azure_endpoint = "https://sanskrutishivanshishubham.openai.azure.com/")
     
     def format_docs(docs):
         return "\n\n".join(doc.page_content for doc in docs)
