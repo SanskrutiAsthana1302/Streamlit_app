@@ -20,7 +20,7 @@ os.environ['PINECONE_API_KEY'] = st.secrets["PINECONE"]['PINECONE_API_KEY']
 os.environ['LANGCHAIN_PROJECT'] = st.secrets["LANGSMITH"]["LANGCHAIN_PROJECT"]
 
 client = Client()
-embeddings  = AzureOpenAIEmbeddings(model="arif-text-embedding-ada-002",azure_endpoint = os.environ['OPENAI_ENDPOINT'],openai_api_key = os.environ['OPENAI_API_KEY'])
+embeddings  = AzureOpenAIEmbeddings(model="sanskruti-text-embedding-ada-002",azure_endpoint = os.environ['OPENAI_ENDPOINT'],openai_api_key = os.environ['OPENAI_API_KEY'])
 
 # loading filenames to show in streamlit app
 with open("mappings.json", 'r') as json_file:
