@@ -9,7 +9,7 @@ from langchain_pinecone import PineconeVectorStore
 from langchain_openai import OpenAIEmbeddings,AzureOpenAIEmbeddings
 
 # Index Name
-index_name = 'llmops'
+index_name = 'earning-calls'
 
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_API_KEY"] = st.secrets["LANGSMITH"]['LANGSMITH_API_KEY']
